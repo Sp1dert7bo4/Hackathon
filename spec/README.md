@@ -140,7 +140,7 @@ Bảng tổng hợp vai trò của từng thành viên gắn liền với tracki
 * **Số lượt chỉnh sửa trung bình (Average Correction Turns):** Số lần user phải gõ lại tiêu chí điều chỉnh (Correction Path) không quá 2 lần trước khi chốt quán.
 
 ### B. Nguồn dữ liệu tĩnh cho Prototype Day 06
-* **Nguồn gốc dữ liệu:** Toàn bộ cơ sở dữ liệu đóng (Mock-database) gồm 50 - 100 quán ăn phục vụ cho Prototype được trích xuất trực tiếp từ danh sách "Saved Places" (Địa điểm đã lưu) do người dùng thực tế chia sẻ công khai trên các nền tảng mạng xã hội và cộng đồng ẩm thực để làm bộ dữ liệu thử nghiệm chuẩn.
+* **Nguồn gốc dữ liệu:** Toàn bộ cơ sở dữ liệu đóng (Mock-database) gồm 550 - 600 quán ăn phục vụ cho Prototype được trích xuất trực tiếp từ danh sách "Saved Places" (Địa điểm đã lưu) do người dùng thực tế chia sẻ công khai trên các nền tảng mạng xã hội và cộng đồng ẩm thực để làm bộ dữ liệu thử nghiệm chuẩn.
 
 ### C. Kịch bản xử lý rủi ro hệ thống và độ trễ API Google Maps
 * **Phía Giao diện (UI/UX):** Khi gọi API gặp độ trễ lớn (>5 giây), trạng thái Loading hiển thị các câu thoại tương tác thông minh (Ví dụ: "AI đang chạy đi hỏi xem quán nào còn bàn quanh bạn nhé...").
