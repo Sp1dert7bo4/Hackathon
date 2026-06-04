@@ -124,7 +124,7 @@ Bảng tổng hợp vai trò của từng thành viên gắn liền với tracki
 
 | Thành viên | Vai trò chính | Đầu việc cụ thể phụ trách | Bằng chứng bàn giao trong repo |
 | :--- | :--- | :--- | :--- |
-| **Đặng Sỹ Tiến** | Prototype + Demo Script | Raw data, xử lý giải quyết về vấn đề API Map, Tinh chỉnh giao diện, hỗ trợ đưa ra các testcase cho từng luồng  | Link prototype, video/ảnh demo chạy được |
+| **Đặng Sỹ Tiến** | Prototype + Demo Script | Crawl data, xử lý giải quyết về vấn đề API Map, Tinh chỉnh giao diện, hỗ trợ đưa ra các testcase cho từng luồng  | Link prototype, video/ảnh demo chạy được |
 | **Nguyễn Trung Dân** | Research + Repo | Tìm API phù hợp để dùng Google Map, chỉnh sửa slide, giao diện | Ảnh chụp màn hình evidence, README repo |
 | **Trần Nhất Huy** | Engineer + SPEC Lead | Chuẩn bị Mockup, prototype, Phân tích thiết kế luồng dữ liệu,Xây dựng giao diện ,xây dựng testcase,  | Nhật ký prompt, ảnh test failure path |
 | **Nguyễn Minh Anh** | SPEC + Tester | Hình dung và thiết kế UXUI, hỗ trợ làm testcase, viết tài liệu | Test case log, ảnh correction path |
