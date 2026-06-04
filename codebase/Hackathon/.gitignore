@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+data/geocode_cache.json
+.DS_Store
+node/
+node.zip
+frontend/node_modules/

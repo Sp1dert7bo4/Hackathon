@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Food Advisor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Hà Nội food agent</p>
+            <h1>AI Food Advisor</h1>
+          </div>
+          <label class="toggle">
+            <input id="simulateFailure" type="checkbox" />
+            <span>Giả lập fallback</span>
+          </label>
+        </header>
+
+        <section class="composer" aria-label="Nhập yêu cầu">
+          <textarea id="prompt" rows="3" placeholder="Ví dụ: Tôi muốn ăn lẩu Thái gần Hồ Gươm dưới 200k/người"></textarea>
+          <div class="actions">
+            <div class="chips" aria-label="Gợi ý nhanh">
+              <button data-prompt="Tôi muốn ăn lẩu Thái gần Hồ Gươm dưới 200k/người">Lẩu Thái</button>
+              <button data-prompt="Đồ Hàn Cầu Giấy 150k/người ăn tối">Đồ Hàn</button>
+              <button data-prompt="Bún chả Ba Đình dưới 100k/người">Bún chả</button>
+              <button data-prompt="Tôi muốn ăn gì đó">Mơ hồ</button>
+            </div>
+            <button id="sendButton" class="primary">Gợi ý ngay</button>
+          </div>
+        </section>
+
+        <section id="status" class="status" hidden></section>
+        <section id="questions" class="questions" hidden></section>
+        <section id="results" class="results" aria-live="polite"></section>
+      </section>
+
+      <aside class="panel">
+        <h2>Luồng agent</h2>
+        <ol id="steps">
+          <li class="active">Intent</li>
+          <li>Clarification</li>
+          <li>Search</li>
+          <li>Ranking</li>
+          <li>Explain</li>
+          <li>Feedback</li>
+        </ol>
+        <div class="inspector">
+          <h3>Intent hiện tại</h3>
+          <pre id="intentBox">{}</pre>
+        </div>
+      </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

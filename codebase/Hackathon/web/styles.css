@@ -1,0 +1,331 @@
+:root {
+  color-scheme: light;
+  --ink: #17211f;
+  --muted: #64726e;
+  --line: #d8dfdc;
+  --panel: #ffffff;
+  --surface: #f6f8f4;
+  --green: #16765b;
+  --green-dark: #0d513e;
+  --gold: #b7791f;
+  --red: #b42318;
+  --blue: #2463a7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.workspace,
+.panel {
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 52px);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.composer,
+.panel,
+.status,
+.questions,
+.restaurant {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.composer {
+  padding: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 104px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  color: var(--ink);
+  background: #fbfcfb;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(22, 118, 91, 0.14);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 13px;
+  color: var(--ink);
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--green);
+}
+
+.primary {
+  min-width: 126px;
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+}
+
+.primary:hover {
+  background: var(--green-dark);
+}
+
+.status,
+.questions {
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.status.warning {
+  border-color: #e6c36a;
+  background: #fff9e8;
+  color: #765214;
+}
+
+.status.error {
+  border-color: #f2b8b5;
+  background: #fff4f2;
+  color: var(--red);
+}
+
+.questions {
+  display: grid;
+  gap: 10px;
+}
+
+.question-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.question-row input {
+  width: 100%;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.results {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.restaurant {
+  display: grid;
+  grid-template-columns: 164px 1fr;
+  overflow: hidden;
+}
+
+.restaurant img {
+  width: 100%;
+  height: 100%;
+  min-height: 176px;
+  object-fit: cover;
+  background: #dde4e1;
+}
+
+.restaurant-body {
+  padding: 14px;
+}
+
+.restaurant-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.restaurant h3 {
+  font-size: 19px;
+}
+
+.score {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.meta,
+.reason,
+.feedback-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meta {
+  margin: 10px 0;
+}
+
+.pill {
+  border-radius: 999px;
+  background: #edf3f1;
+  color: #30443f;
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+.reason {
+  margin: 10px 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.feedback-row button {
+  min-height: 34px;
+  font-size: 13px;
+}
+
+.panel {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+  padding: 16px;
+}
+
+ol {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 18px;
+  padding-left: 22px;
+}
+
+li {
+  color: var(--muted);
+}
+
+li.active {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.inspector {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+pre {
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: #2e3b38;
+}
+
+@media (max-width: 860px) {
+  .shell {
+    grid-template-columns: 1fr;
+    width: min(100% - 24px, 720px);
+    padding: 18px 0;
+  }
+
+  .topbar,
+  .actions,
+  .restaurant-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .panel {
+    position: static;
+  }
+
+  .restaurant {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant img {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}
